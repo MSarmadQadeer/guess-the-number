@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+:root{
+    --win:rgb(2, 173, 108);
+    --lost: lightpink;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Handlee', cursive;
+}
+
+html {
+    font-size: 23px;
+}
+
+body {
+    font-weight: bold;
+    background-color: rgb(255, 238, 182);
+}
+
+.win {
+    background-color: var(--win);
+}
+
+.lost {
+    background-color: var(--lost);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* ==========
+HEADER STYLES
+========== */
+
+header {
+    position: relative;
+    padding: 1rem;
+    border-bottom: 0.7rem solid rgb(250, 167, 28);
+    height: 40vh;
+}
+
+header article {
+    display: flex;
+    justify-content: space-between;
+}
+
+header article>*:last-child {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.main-heading {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1.4px;
+    width: 100%;
+}
+
+.secret {
+    display: inline-block;
+    background-color: rgb(250, 167, 28);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.secret p {
+    padding: 0.2rem 1.7rem;
+    color: white;
+    font-size: 3rem;
+}
+
+
+/* ===============================
+Play Again and Check Button Styles
+=============================== */
+
+.again,
+.check {
+    padding: 0.7rem 1.3rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.again:active,
+.check:active {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(3px);
+}
+
+
+/* --- SECTION Styles --- */
+
+section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section article {
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section article input {
+    text-align: center;
+    padding: 2rem 2.3rem;
+    border: 5px solid rgb(250, 167, 28);
+    border-radius: 5px;
+    color: black;
+    background: rgba(255, 255, 255);
+    font-size: 3rem;
+    font-weight: bold;
+    width: 12rem;
+    height: 6rem;
+    outline: none;
+}
+
+
+/* ===============
+Score Board Styles
+=============== */
+
+.score-board {
+    align-items: flex-start;
+    letter-spacing: 3px;
+}
+
+.guess-review {
+    font-size: 2rem;
+}
+
+.score-board div {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* ====
+OVERLAY
+==== */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(34, 34, 34, 0.808);
+}
+
+
+/* =
+CARD
+= */
+
+.card {
+    background-color: white;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+.win-border {
+    border: var(--win) solid 5px;
+}
+
+.lost-border {
+    border: var(--lost) solid 5px;
+}
+
+.card button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 3.5rem;
+    color: red;
+    transform: translate(-10%, -30%);
+    padding: 0.5rem;
+}
+
+.card .guess-review {
+    margin: 2rem 0rem;
+}
+
+.card button:hover {
+    cursor: pointer;
+}
+
+
+/* =========
+MEDIA QURIES
+========= */
+
+@media screen and (max-width:1000px) and (min-width:771px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:770px) and (min-width:551px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    html {
+        font-size: 12px;
+    }
+    section {
+        flex-direction: column-reverse;
+    }
+    section article {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-height:770px) and (min-height:551px) and (min-width:501px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-height:550px) and (min-height:501px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-height:500px) and (max-width:500px) {
+    html {
+        font-size: 9.5px;
+    }
+    section {
+        flex-direction: row-reverse;
+    }
+    section article {
+        justify-content: space-between;
+    }
+}

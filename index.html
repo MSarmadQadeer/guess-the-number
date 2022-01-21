@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <article>
+            <button class="again">Play Again</button>
+            <p>(Between 1 and 20)</p>
+        </article>
+        <p class="main-heading">Guess The Number!</p>
+        <div class="secret">
+            <p class="secret-val">?</p>
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <input type="number">
+            <button class="check">Check!</button>
+        </article>
+        <article class="score-board">
+            <p class="guess-review">Start guessing...</p>
+            <div>
+                <p>Score: <span class="score">20</span></p>
+                <p>Highscore: <span class="highscore">0</span></p>
+            </div>
+        </article>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <div class="card score-board hidden">
+        <button class="close-card-btn">&times;</button>
+        <p class="guess-review">Start guessing...</p>
+        <div>
+            <p>Score: <span class="score">20</span></p>
+            <p>Highscore: <span class="highscore">0</span></p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
