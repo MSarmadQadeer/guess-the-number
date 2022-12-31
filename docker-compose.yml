@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  game:
+    image: msarmadqadeer/guess-the-number-game:latest
+    container_name: guess-the-number-game
+    ports:
+      - "8081:80"
